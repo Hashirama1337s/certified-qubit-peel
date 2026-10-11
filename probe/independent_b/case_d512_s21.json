@@ -1,0 +1,23 @@
+{
+ "d": 512,
+ "seed": 21,
+ "lam_sha256": "6deba7df218dd869f9f7282a3d809887e8910828b4587d1cf2ba5587acf6d7ff",
+ "lam_first": "-1.994383083507226",
+ "lam_last": "1.9795844626083272",
+ "levels": [
+  {
+   "N": 512,
+   "n": 256,
+   "Eq": "0.620043989669508",
+   "R": "0.00826603344611619",
+   "Eq_float": 0.6200439896695082,
+   "R_float_recomputed": 0.008266033446147958,
+   "n_oracle_calls": 156,
+   "n_chain_points": 155,
+   "time_s": 153.23,
+   "max_need_edges": 5388,
+   "lp_integral_frac": 0.923
+  }
+ ],
+ "total_time_s": 153.3
+}

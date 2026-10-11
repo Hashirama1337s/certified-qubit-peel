@@ -1,0 +1,73 @@
+{
+ "implementation": "B (independent), d=2048 level 1",
+ "method": "same exact hull + exact-MWPM method as RESULTS.json; oracle (exact_split4.py BigLevel5): LP duals from the bipartite-double-cover assignment (linear_sum_assignment + SPFA potentials); certified LP bounds prune hull triangles; warm HiGHS LP with odd-set cuts -> integer duals -> float64 reduced-cost screening with a rigorous margin (>100x rounding bound), exact integers for every uncleared edge -> exact min-cost perfect matching on surviving edges (forced leaves, even cycles, else networkx integer blossom). Regression: reproduces N=256/512 matchings of RESULTS.json exactly.",
+ "started": "2026-10-10 10:24:11",
+ "cases": {
+  "d2048_seed11": {
+   "d": 2048,
+   "seed": 11,
+   "N": 2048,
+   "lam_sha256": "698c6d330829b2e36f7c4476da1ebf8a37d73b554ce7655a46daeb27eeea3241",
+   "lam_first": "-1.9885280771117817",
+   "lam_last": "1.9912891532637629",
+   "Eq": "0.471474919195040",
+   "R": "0.00657307620189410",
+   "timed_out": false,
+   "R_upper_bound_certified": "0.00657307620189410",
+   "R_lower_bound_certified": "0.00657307620189410",
+   "n_open_triangles": 0,
+   "n_oracle_calls": 374,
+   "n_chain_points": 340,
+   "split_time_s": 1718.7,
+   "oracle_max_need_edges": 10114,
+   "oracle_max_exact_screened_edges": 10114,
+   "oracle_lp_integral_frac": 0.872,
+   "oracle_mean_time_s": 4.58,
+   "n_certified_bound_queries": 33,
+   "dual_sources": {
+    "highs_fallback": 17,
+    "analytic": 1,
+    "assignment_bound": 33,
+    "assignment": 323
+   },
+   "R_plain_float64": "0.006573076202016637",
+   "post_check_Mstar_exact_argmin_at_s_eq_2Eq": true,
+   "status": "EXACT (all hull triangles closed)",
+   "total_time_s": 1721.6
+  },
+  "d2048_seed12": {
+   "d": 2048,
+   "seed": 12,
+   "N": 2048,
+   "lam_sha256": "ec1afed001800506d4fa84302efc53a1febc94411d9970a2e8a73abc56021afa",
+   "lam_first": "-1.991698128692196",
+   "lam_last": "1.9915719712388853",
+   "Eq": "0.471469687420983",
+   "R": "0.00501460507475278",
+   "timed_out": false,
+   "R_upper_bound_certified": "0.00501460507475278",
+   "R_lower_bound_certified": "0.00501460507475278",
+   "n_open_triangles": 0,
+   "n_oracle_calls": 378,
+   "n_chain_points": 346,
+   "split_time_s": 1671.9,
+   "oracle_max_need_edges": 9951,
+   "oracle_max_exact_screened_edges": 9951,
+   "oracle_lp_integral_frac": 0.878,
+   "oracle_mean_time_s": 4.41,
+   "n_certified_bound_queries": 31,
+   "dual_sources": {
+    "highs_fallback": 16,
+    "analytic": 1,
+    "assignment_bound": 31,
+    "assignment": 330
+   },
+   "R_plain_float64": "0.005014605074734391",
+   "post_check_Mstar_exact_argmin_at_s_eq_2Eq": true,
+   "status": "EXACT (all hull triangles closed)",
+   "total_time_s": 1675.2
+  }
+ },
+ "finished": "2026-10-10 11:20:48",
+ "wall_s": 3396.8
+}

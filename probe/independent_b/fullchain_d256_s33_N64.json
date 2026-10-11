@@ -1,0 +1,10 @@
+{
+ "d": 256,
+ "seed": 33,
+ "N": 64,
+ "n_chain_vertices": 493,
+ "n_oracle": 984,
+ "R_full_chain": "0.257725007742323",
+ "Eq_full_chain": "0.211854843720781",
+ "time_s": 44.0
+}

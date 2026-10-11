@@ -1,0 +1,17 @@
+{
+ "implementation": "B (independent solver), driver run_npy.py",
+ "source": "..\\..\\theory\\results\\d8\\nbrun\\level1_input_d2048.npy",
+ "d": 2048,
+ "lam_sha256": "db94cc79dca05b2e2fa1e7524b32c8a096455d2343d46bc4b9037e6c2d09f5b2",
+ "started": "2026-10-10 19:59:49",
+ "Eq": "0.319562987971769",
+ "R": "0.00620256841056006",
+ "timed_out": false,
+ "R_upper_bound_certified": "0.00620256841056006",
+ "R_lower_bound_certified": "0.00620256841056006",
+ "n_oracle_calls": 378,
+ "split_time_s": 1802.1,
+ "R_plain_float64": "0.006202568410571985",
+ "status": "EXACT (all hull triangles closed)",
+ "total_time_s": 1802.2
+}
