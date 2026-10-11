@@ -1,6 +1,8 @@
 # Certified optimisation of the minimum-interaction qubit peel of "Wave packets from the spectrum"
 
-**Moki & Julio (AI-assisted) · 2026** · note: [NOTE.md](NOTE.md)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23293218.svg)](https://doi.org/10.5281/zenodo.23293218)
+
+**Moki & Julio (AI-assisted) · 2026** · DOI [10.5281/zenodo.23293218](https://doi.org/10.5281/zenodo.23293218) (all versions; v1.0: 10.5281/zenodo.23293219) · note: [NOTE.md](NOTE.md)
 
 ## In plain words
 

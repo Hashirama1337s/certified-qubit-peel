@@ -4,6 +4,7 @@ title: "Certified optimisation of the minimum-interaction qubit peel of \"Wave p
 authors:
   - name: "Moki & Julio"
 version: "1.0"
+doi: "10.5281/zenodo.23293218"
 date-released: "2026-10-11"
 repository-code: "https://github.com/Hashirama1337s/certified-qubit-peel"
 license: CC-BY-4.0
