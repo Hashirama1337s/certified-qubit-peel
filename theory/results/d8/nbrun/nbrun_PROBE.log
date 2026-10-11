@@ -1,0 +1,20 @@
+2026-10-10 14:45:23 loaded notebook e37b25bf1e3ce775 | python 3.11.9 | numpy 2.4.6 | OPENBLAS_NUM_THREADS 4 | OMP_NUM_THREADS 4
+2026-10-10 14:45:28 level 1 start: d=512, N_steps=200, refining_factor=10, expected fits 601
+2026-10-10 14:45:33   d=512 fit 100/601  0.05 s/fit  level ETA 0.01 h
+2026-10-10 14:45:36   d=512 fit 200/601  0.04 s/fit  level ETA 0.00 h
+2026-10-10 14:45:41   d=512 fit 300/601  0.04 s/fit  level ETA 0.00 h
+2026-10-10 14:45:46   d=512 fit 400/601  0.04 s/fit  level ETA 0.00 h
+2026-10-10 14:45:51   d=512 fit 500/601  0.05 s/fit  level ETA 0.00 h
+2026-10-10 14:45:56   d=512 fit 600/601  0.05 s/fit  level ETA 0.00 h
+2026-10-10 14:45:56 level 1 done: {"level": 1, "d": 512, "EA": [-0.44617239458187996, 0.44617239458187996], "E_q": 0.8923447891637599, "sumEA2": 0.39813961137385756, "loss": 1.3593177174814105e-05, "ratio_cao": 0.017480568410385016, "fits": 601, "secs": 27.6}
+2026-10-10 14:46:23 PROBE {"seed": 21, "theirs": {"E_q": 0.8923447891637599, "ratio": 0.017480568410385016}, "port": {"E_q": 0.8923447891637599, "ratio": 0.017480568410385106, "ind_min": 69}, "ind_min_theirs": 69, "rel_dEq": 0.0, "rel_dratio": 5.1603368170341255e-15, "rest_maxdiff": 1.6701506844185587e-10, "stored_run": {"E_q": 0.8923447891637603, "ratio": 0.01748056841038443}, "secs_theirs": 27.6, "secs_port": 27.2, "PASS": true}
+2026-10-10 14:46:32 loaded notebook e37b25bf1e3ce775 | python 3.11.9 | numpy 2.4.6 | OPENBLAS_NUM_THREADS 4 | OMP_NUM_THREADS 4
+2026-10-10 14:46:34 level 1 start: d=512, N_steps=200, refining_factor=10, expected fits 601
+2026-10-10 14:46:39   d=512 fit 100/601  0.05 s/fit  level ETA 0.01 h
+2026-10-10 14:46:42   d=512 fit 200/601  0.04 s/fit  level ETA 0.00 h
+2026-10-10 14:46:47   d=512 fit 300/601  0.04 s/fit  level ETA 0.00 h
+2026-10-10 14:46:52   d=512 fit 400/601  0.05 s/fit  level ETA 0.00 h
+2026-10-10 14:46:57   d=512 fit 500/601  0.05 s/fit  level ETA 0.00 h
+2026-10-10 14:47:02   d=512 fit 600/601  0.05 s/fit  level ETA 0.00 h
+2026-10-10 14:47:02 level 1 done: {"level": 1, "d": 512, "EA": [-0.4486885588283869, 0.4486885588283869], "E_q": 0.8973771176567737, "sumEA2": 0.4026428456469896, "loss": 9.250743477741053e-06, "ratio_cao": 0.01176323064425181, "fits": 601, "secs": 27.7}
+2026-10-10 14:47:29 PROBE {"seed": 22, "theirs": {"E_q": 0.8973771176567737, "ratio": 0.01176323064425181}, "port": {"E_q": 0.8973771176567737, "ratio": 0.011763230644251827, "ind_min": 69}, "ind_min_theirs": 69, "rel_dEq": 0.0, "rel_dratio": 1.4746998749229576e-15, "rest_maxdiff": 3.743994003713169e-10, "stored_run": {"E_q": 0.897377117656774, "ratio": 0.011763230644250448}, "secs_theirs": 27.7, "secs_port": 27.2, "PASS": true}
