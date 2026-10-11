@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this note, its certified optima or its code, please cite it as below. Text and data: CC BY 4.0. Code: MIT."
+title: "Certified optimisation of the minimum-interaction qubit peel of \"Wave packets from the spectrum\""
+authors:
+  - name: "Moki & Julio"
+version: "1.0"
+date-released: "2026-10-11"
+repository-code: "https://github.com/Hashirama1337s/certified-qubit-peel"
+license: CC-BY-4.0
+keywords:
+  - quantum mereology
+  - tensor product structure
+  - minimal interaction
+  - qubit factorization
+  - perfect matching
+  - certified optimization
+  - Edmonds matching polytope
+  - reproducibility
+abstract: >-
+  Cao, Friedrich, Girard, Loizeau and Singh (arXiv:2606.10004) factorise a Hamiltonian into qubits by iterated
+  minimum-interaction splits, selecting at each step the split with the smallest Tr(H_int^2)/Tr(H_q^2) from a grid of
+  qubit energies optimised by BFGS. With the qubit frozen, the optimum of their sorted-level loss is a minimum-weight
+  perfect matching of the levels. We solve this exactly with an LP-dual certificate, validated against an exact blossom
+  solver and an independent implementation. Running the authors' published notebook unmodified on the matrix of their
+  figures, the first split has ratio 0.012477 against the certified optimum 0.0062026 (+101%), on a different Bessel
+  peak; over all ten splits the certified optimum beats their split by 101% to 237% at the four largest sizes and
+  coincides with it from d = 128 down. The certified optima lie within 1% of E_q = 2 pi/x_i (zeros of J1), the first-pole
+  condition of their Eq. (43); their printed Eq. (47) states a gap twice as large. Their leftover-interaction figure
+  survives (about 2-3% at d = 2048).
