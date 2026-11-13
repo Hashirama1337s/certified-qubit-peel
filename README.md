@@ -1,6 +1,6 @@
 # How close does a published qubit-building search get to the best answer?
 
-**A published search that builds qubits from a list of energies, re-run with its authors' own notebook and checked against proven best splits: on the four largest splits it scores 2 to 3.4 times the proven best, on the six smaller ones it finds it, and its headline result holds up.**
+**Re-running a published qubit-building search with its authors' own notebook: against proven best splits it scores 2 to 3.4 times the best on the four largest splits, finds the best on the six smaller ones, and its headline result holds.**
 
 [![DOI 10.5281/zenodo.23293218](brand/doi.svg)](https://doi.org/10.5281/zenodo.23293218) ![Licence: text and data CC BY 4.0, code MIT](brand/licence.svg) [![Moki & Julio lab map](brand/lab.svg)](https://github.com/Hashirama1337s)
 
