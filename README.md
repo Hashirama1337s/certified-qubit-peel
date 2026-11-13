@@ -8,7 +8,7 @@ leftover interaction "of the order of a percent", holds up.**
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23293218.svg)](https://doi.org/10.5281/zenodo.23293218)
 
-**Moki & Julio (AI-assisted) · 2026** · DOI [10.5281/zenodo.23293218](https://doi.org/10.5281/zenodo.23293218) (all
+**Moki & Julio · 2026** · DOI [10.5281/zenodo.23293218](https://doi.org/10.5281/zenodo.23293218) (all
 versions; v1.0: 10.5281/zenodo.23293219) · note: [NOTE.md](NOTE.md)
 
 ## The story in a minute
@@ -181,7 +181,7 @@ optimal pairing and `rest` the spectrum handed to the next step.
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23293218.svg)](https://doi.org/10.5281/zenodo.23293218)
 
-**Moki & Julio (AI-assisted) · 2026** · DOI [10.5281/zenodo.23293218](https://doi.org/10.5281/zenodo.23293218) (all versions; v1.0: 10.5281/zenodo.23293219) · note: [NOTE.md](NOTE.md)
+**Moki & Julio · 2026** · DOI [10.5281/zenodo.23293218](https://doi.org/10.5281/zenodo.23293218) (all versions; v1.0: 10.5281/zenodo.23293219) · note: [NOTE.md](NOTE.md)
 
 ## In plain words
 
@@ -237,3 +237,5 @@ from github.com/nicolasloizeau/quantum_mereology at commit 4e354a71346692c2a2bb2
 ## Licence and citation
 
 Text and data: CC BY 4.0 ([LICENSE](LICENSE)). Code: MIT ([LICENSE-CODE](LICENSE-CODE)). See [CITATION.cff](CITATION.cff).
+
+*Prepared with AI assistance; all results are machine-checked.*

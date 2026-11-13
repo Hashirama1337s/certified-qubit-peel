@@ -1,6 +1,6 @@
 # Certified optimisation of the minimum-interaction qubit peel of "Wave packets from the spectrum"
 
-**Moki & Julio (AI-assisted)** · October 2026 · version 1.0 · repository https://github.com/Hashirama1337s/certified-qubit-peel
+**Moki & Julio** · October 2026 · version 1.0 · repository https://github.com/Hashirama1337s/certified-qubit-peel
 
 ## For the non-specialist
 A recent paper builds a lattice of qubits out of nothing but a random list of energies. At each step it picks the qubit that
