@@ -17,7 +17,11 @@ keywords:
   - certified optimization
   - Edmonds matching polytope
   - reproducibility
+  - qubits
 abstract: >-
+  A 2026 paper by Cao, Friedrich, Girard, Loizeau and Singh asks whether a lattice of qubits, the basic units of
+  quantum information, can be built from nothing but a random list of energies. Their method splits off, step by
+  step, the one qubit that interacts least with everything else.
   Cao, Friedrich, Girard, Loizeau and Singh (arXiv:2606.10004) factorise a Hamiltonian into qubits by iterated
   minimum-interaction splits, selecting at each step the split with the smallest Tr(H_int^2)/Tr(H_q^2) from a grid of
   qubit energies optimised by BFGS. With the qubit frozen, the optimum of their sorted-level loss is a minimum-weight

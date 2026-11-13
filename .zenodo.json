@@ -1,0 +1,30 @@
+{
+  "title": "Certified optimisation of the minimum-interaction qubit peel of \"Wave packets from the spectrum\"",
+  "upload_type": "software",
+  "description": "<p><b>In plain words.</b> \nA 2026 paper by Cao, Friedrich, Girard, Loizeau and Singh asks whether a lattice of qubits, the basic units of quantum information, can be built from nothing but a random list of energies. Their method splits off, step by step, the one qubit that interacts least with everything else. We asked a narrow question: how close does their search get to the best split under its own rule? We wrote a solver that finds the best split and returns a mathematical certificate that nothing better exists in that search. Running the authors' own notebook unchanged: on the four largest splits it scores 2 to 3.4 times the certified best, on the six smaller ones it finds the best, and the paper's headline result holds. The authors never claimed a global optimum, and we did not test their physical conclusions.</p>\n<p><b>The idea in one picture.</b> hiking in fog. A local search climbs to the best point it can see from where it starts, which may not be the best point of the whole range. <b>Where the picture breaks.</b> their search does look widely first (a grid of 5,000 trial energies), and the 'range' here is a set of pairings of energy levels, not a landscape.</p>\n<p><b>For specialists.</b> Cao, Friedrich, Girard, Loizeau and Singh (arXiv:2606.10004) factorise a Hamiltonian into qubits by iterated minimum-interaction splits, selecting at each step the split with the smallest Tr(H_int^2)/Tr(H_q^2) from a grid of qubit energies optimised by BFGS. With the qubit frozen, the optimum of their sorted-level loss is a minimum-weight perfect matching of the levels. We solve this exactly with an LP-dual certificate, validated against an exact blossom solver and an independent implementation. Running the authors' published notebook unmodified on the matrix of their figures, the first split has ratio 0.012477 against the certified optimum 0.0062026 (+101%), on a different Bessel peak; over all ten splits the certified optimum beats their split by 101% to 237% at the four largest sizes and coincides with it from d = 128 down. The certified optima lie within 1% of E_q = 2 pi/x_i (zeros of J1), the first-pole condition of their Eq. (43); their printed Eq. (47) states a gap twice as large. Their leftover-interaction figure survives (about 2-3% at d = 2048).</p>\n<p><b>Links.</b> Repository, with a plain-language guide: <a href=\"https://github.com/Hashirama1337s/certified-qubit-peel\">github.com/Hashirama1337s/certified-qubit-peel</a>. All projects: <a href=\"https://github.com/Hashirama1337s\">the Moki &amp; Julio lab map</a>.</p>\n<p><i>Prepared with AI assistance; what was checked, and by what, is stated above.</i></p>",
+  "creators": [
+    {
+      "name": "Moki & Julio"
+    }
+  ],
+  "license": "cc-by-4.0",
+  "keywords": [
+    "quantum mereology",
+    "tensor product structure",
+    "minimal interaction",
+    "qubit factorization",
+    "perfect matching",
+    "certified optimization",
+    "Edmonds matching polytope",
+    "reproducibility",
+    "qubits"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/Hashirama1337s/certified-qubit-peel/tree/v1.0",
+      "relation": "isSupplementTo",
+      "resource_type": "software",
+      "scheme": "url"
+    }
+  ]
+}

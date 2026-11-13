@@ -21,8 +21,8 @@ returns a **mathematical certificate** that nothing better exists in that search
 second solver, written separately, agrees with it. Then we ran the authors' notebook, unchanged, on the exact random
 matrix behind their paper (10.7 hours, all ten splits).
 
-A picture that helps (it is only a picture): hiking in fog. A local search climbs to the best point it can see from where
-it starts, which may not be the best point of the whole range. Where the picture breaks: their search does look widely
+![](brand/icon-picture.svg) **The idea in one picture.** Hiking in fog. A local search climbs to the best point it can see from where
+it starts, which may not be the best point of the whole range. **Where the picture breaks.** Their search does look widely
 first (a grid of 5,000 trial energies), and the "range" here is a set of pairings of energy levels, not a landscape.
 
 What we found: their first qubit scores about twice as badly as the certified best (+101 %), sitting on a different
