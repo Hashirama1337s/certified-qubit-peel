@@ -4,7 +4,7 @@
 
 [![DOI 10.5281/zenodo.23293218](brand/doi.svg)](https://doi.org/10.5281/zenodo.23293218) ![Licence: text and data CC BY 4.0, code MIT](brand/licence.svg) [![Moki & Julio lab map](brand/lab.svg)](https://github.com/Hashirama1337s)
 
-Moki & Julio · 2026 · version 1.0
+Moki & Julio · 2026 · version 1.0.1
 
 **Read** [NOTE.md](NOTE.md) · **Re-run** `python ../theory/d8_verify_note.py` (from `probe/`) · **Environment** [ENV.txt](ENV.txt)
 
@@ -31,6 +31,10 @@ best. Their headline holds up: the leftover interaction is 2.88 % with their not
 optimum. Their search is a local method that they describe as preferring "certain minima"; **they never claimed a global
 optimum**. Our findings concern how far that search is from the optimum of their own criterion, not their physical
 conclusions, and we did not test their wave-packet, geometry or Pauli-field results.
+
+![Bar chart: for each of ten splits, the published search's ratio divided by the certified optimum; 2.01, 3.37, 2.48 and 2.15 for the four largest, 1.00 for the rest](figures/gap_per_split.svg)
+
+*The published qubit-building search (the authors' notebook, unchanged, on the matrix behind their paper) against the certified optimum of its own selection rule (for the kind of qubit their code builds), for each of its ten splits. Each bar is their selection ratio divided by the certified best for the same input, so 1 means they found the best. On the four largest splits (2,048 down to 256 levels) their split is 2.01, 3.37, 2.48 and 2.15 times the optimum; from 128 levels down it matches the optimum to within 0.01 %. Their search is a local method (a grid of trial energies, then local optimisation), and they never claimed a global optimum; their headline result, a leftover interaction of about 2.9 %, holds either way (2.88 % with their notebook, 2.90 % with the exact optimum at each step).*
 
 ## At a glance
 
@@ -118,6 +122,10 @@ zeros of the Bessel function J1 (a standard function of mathematical physics). T
 itself, the "first-pole condition" of their Eq. (43) (a pole is a point where a formula becomes infinite); their printed
 Eq. (47) states a gap twice as large.
 
+![Log-log plot of selection ratio against qubit energy for the first split: their 15,001 fits as a grey curve with dips, the certified best in each dip as blue dots, their pick as an orange diamond](figures/first_split_peaks.svg)
+
+*The first split (2,048 levels), seen as a landscape. Grey: the selection ratio of each of the 15,001 fits their notebook made, one per trial qubit energy E_q. Blue: the certified best split inside each of the first ten dips, whose centres lie at 2 pi divided by the zeros of the Bessel function J1 (dotted lines; the README calls the dips "peaks"). Their final pick (orange, ratio 0.012477 at E_q 0.6179) is in the third dip and 18 % above the best in that dip; the certified best of the whole first split, 0.0062026 at E_q 0.3196, is in the sixth dip, where their fits stay far higher. Both axes are logarithmic; lower is better. Their search is a local method and they never claimed a global optimum; this measures distance from the optimum of their own selection rule, not their physical conclusions.*
+
 **All ten splits** (their notebook against the certified optimum on the same input):
 
 | levels d | 2048 | 1024 | 512 | 256 | 128 down to 4 |
@@ -174,14 +182,42 @@ optimal pairing and `rest` the spectrum handed to the next step.
 - **Grid search; local optimisation** - try many starting values, then improve each one by small steps.
 - **Bessel function J1** - a standard function of mathematical physics; its zeros are fixed, known numbers.
 
+## Open doors
+
+Questions this note leaves open, with pointers to the files that help someone start.
+
+- **One score for the whole stack of qubits.** The method picks the best qubit one step at a time. We found that the
+  certified best choice at each step does not consistently leave less interaction at the end, so the best step-by-step
+  path and the best overall split can differ. Cao and co-authors name a "global loss function" that judges the whole
+  decomposition at once as an open point. *Status:* open according to Cao et al. 2026 (arXiv:2606.10004v1, Section 4,
+  "Loss function"). *Start here:* `exact_cao_split` in `theory/d8_exact.py`, which returns the certified pairing and the
+  spectrum handed to the next step, and the per-level results in `theory/results/d8/nbrun/`. *Ceiling:* a certified best
+  decomposition of one spectrum into qubits under a whole-stack score, to compare with the step-by-step answer.
+- **Why the best qubit energies sit at Bessel zeros.** Every certified first-split optimum we computed (8 spectra plus the
+  authors' matrix) lies within 1 % of 2 pi / x_i, where x_i are the zeros of the Bessel function J1, as a pole condition in
+  the authors' own paper suggests. We measured this; we did not prove it, and we did not work out which peak wins for a given
+  size. *Status:* UNTESTED observation from this work (measured, not proved). *Start here:* the per-peak certified table
+  `theory/results/d9/npy_seed3_d2048.json` and `theory/d9_spikes.py`, and Section 3.4 of [NOTE.md](NOTE.md). *Ceiling:* a
+  proof of where the best single qubit sits in a large random spectrum, and how its quality changes with size.
+- **How many nearly independent qubits can one spectrum give.** Loizeau and Sels ask "Is it possible to partition a system
+  forever?" and argue that a spectrum whose density is not exactly Gaussian gives only a finite number of elementary parts.
+  The certified split lets anyone follow one spectrum step by step and see where the leftover interaction stops being small,
+  with a proof at each step that no better split exists under the rule. *Status:* open according to Loizeau and Sels 2024
+  (arXiv:2409.01391v2, Section 5, where it is posed as a question and answered by an argument, not a proof). *Start here:*
+  `theory/d8_exact_on.py PEEL` (the certified peel of the authors' matrix, about 1.5 h) and the reuse example above, which
+  returns the spectrum for the next step. *Ceiling:* a certified count of clean qubits for a given spectrum under this rule,
+  a concrete number to set against their argument.
+
 ## How to cite
 
 ```
-Moki & Julio (2026). Certified optimisation of the minimum-interaction qubit peel of "Wave packets from the spectrum". Version 1.0. Zenodo. https://doi.org/10.5281/zenodo.23293218
+Moki & Julio (2026). Certified optimisation of the minimum-interaction qubit peel of "Wave packets from the spectrum". Version 1.0.1. Zenodo. https://doi.org/10.5281/zenodo.23293218
 ```
 
 The DOI always resolves to the newest archived version. Version 1.0 is 10.5281/zenodo.23293219. Machine-readable: [CITATION.cff](CITATION.cff).
 Text and data: CC BY 4.0 ([LICENSE](LICENSE)). Code: MIT ([LICENSE-CODE](LICENSE-CODE)).
+
+Release note - v1.0.1: adds Open doors and figures; no change to the certified results.
 
 ## Related projects
 

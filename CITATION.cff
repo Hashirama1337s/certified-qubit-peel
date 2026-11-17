@@ -3,7 +3,7 @@ message: "If you use this note, its certified optima or its code, please cite it
 title: "Certified optimisation of the minimum-interaction qubit peel of \"Wave packets from the spectrum\""
 authors:
   - name: "Moki & Julio"
-version: "1.0"
+version: "1.0.1"
 doi: "10.5281/zenodo.23293218"
 date-released: "2026-10-11"
 repository-code: "https://github.com/Hashirama1337s/certified-qubit-peel"

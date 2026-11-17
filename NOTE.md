@@ -1,6 +1,6 @@
 # Certified optimisation of the minimum-interaction qubit peel of "Wave packets from the spectrum"
 
-**Moki & Julio** · October 2026 · version 1.0 · repository https://github.com/Hashirama1337s/certified-qubit-peel
+**Moki & Julio** · October 2026 · version 1.0.1 · repository https://github.com/Hashirama1337s/certified-qubit-peel
 
 ## For the non-specialist
 A recent paper builds a lattice of qubits out of nothing but a random list of energies. At each step it picks the qubit that
@@ -83,6 +83,23 @@ Code, logs and data: this repository (commands in README.md; `theory/d8_verify_n
 from the shipped results). Seeds are listed per result. Predictions were recorded in our lab notebook before each run; those
 internal notes are not part of this release.
 
+## 6. Open doors
+
+- **A global loss.** Section 3.5: the exact per-step optimum does not consistently lower the final leftover interaction.
+  Cao et al. (arXiv:2606.10004v1, Sec. 4, "Loss function") propose replacing the per-step loss with "a global loss function
+  that judges the full decomposition of Hilbert space into the full set of degrees-of-freedom". The certified per-step
+  oracle (Section 2) is a building block for a certified search over whole peels. *Status:* open according to Cao et al.
+  2026 (Sec. 4). *Ceiling:* a certified optimum of a whole-peel criterion for one spectrum.
+- **The Bessel peaks.** Section 3.4: all certified first-split optima lie within 1% of E_q = 2 pi/x_i (x_i zeros of J1),
+  the first-pole condition of their Eq. (43). A proof, the rule that selects the winning peak at a given d, and the scaling
+  of the optimum with d are not attempted here. *Status:* UNTESTED observation from this work (measured, not proved).
+  *Ceiling:* an analytic account of the best single-qubit split of a large random spectrum.
+- **How far the peel goes.** Loizeau and Sels (arXiv:2409.01391v2, Sec. 5) ask "Is it possible to partition a system
+  forever?" and argue that a non-Gaussian density of states gives a finite number of elementary subsystems. Iterating the
+  certified split (Section 2) on one spectrum measures where the leftover interaction stops being small, with an
+  optimality certificate at every step under the per-step rule. *Status:* open according to Loizeau and Sels 2024 (Sec. 5,
+  posed as a question with an argument). *Ceiling:* certified counts of clean qubits, compared with their argument.
+
 ## References (all OPENED by us, with locators in the lab notes)
 - Cao, Friedrich, Girard, Loizeau, Singh, "Wave packets from the spectrum", arXiv:2606.10004v1 (Secs. 2-4, Eqs. (12), (43), (47)).
 - Notebook: github.com/nicolasloizeau/quantum_mereology, examples/code_for_Wave-packets-from-the-spectrum.ipynb, commit 4e354a71 (MIT).
@@ -92,3 +109,4 @@ internal notes are not part of this release.
   doi:10.1007/s12532-017-0130-5 (HiGHS, the LP solver).
 - Exact blossom reference: NetworkX max_weight_matching (Edmonds' blossom and primal-dual methods; documentation cites
   Z. Galil, "Efficient Algorithms for Finding Maximum Matching in Graphs", ACM Computing Surveys, 1986).
+- N. Loizeau, D. Sels, "Quantum mereology and subsystems from the spectrum", arXiv:2409.01391v2 (Sec. 5).
